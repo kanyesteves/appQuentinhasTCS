@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF0BC0EB2BE05A2900CD7C2B /* QuentinhasNow1_5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC0EA2BE05A2900CD7C2B /* QuentinhasNow1_5App.swift */; };
+		AF0BC0ED2BE05A2900CD7C2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC0EC2BE05A2900CD7C2B /* ContentView.swift */; };
+		AF0BC0EF2BE05A2B00CD7C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0BC0EE2BE05A2B00CD7C2B /* Assets.xcassets */; };
+		AF0BC0F22BE05A2B00CD7C2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0BC0F12BE05A2B00CD7C2B /* Preview Assets.xcassets */; };
+		AF0BC0FC2BE05A2B00CD7C2B /* QuentinhasNow1_5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC0FB2BE05A2B00CD7C2B /* QuentinhasNow1_5Tests.swift */; };
+		AF0BC1062BE05A2B00CD7C2B /* QuentinhasNow1_5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC1052BE05A2B00CD7C2B /* QuentinhasNow1_5UITests.swift */; };
+		AF0BC1082BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC1072BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF0BC0F82BE05A2B00CD7C2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF0BC0DF2BE05A2900CD7C2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF0BC0E62BE05A2900CD7C2B;
+			remoteInfo = QuentinhasNow1.5;
+		};
+		AF0BC1022BE05A2B00CD7C2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF0BC0DF2BE05A2900CD7C2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF0BC0E62BE05A2900CD7C2B;
+			remoteInfo = QuentinhasNow1.5;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF0BC0E72BE05A2900CD7C2B /* QuentinhasNow1.5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuentinhasNow1.5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0BC0EA2BE05A2900CD7C2B /* QuentinhasNow1_5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuentinhasNow1_5App.swift; sourceTree = "<group>"; };
+		AF0BC0EC2BE05A2900CD7C2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF0BC0EE2BE05A2B00CD7C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF0BC0F12BE05A2B00CD7C2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF0BC0F72BE05A2B00CD7C2B /* QuentinhasNow1.5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuentinhasNow1.5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0BC0FB2BE05A2B00CD7C2B /* QuentinhasNow1_5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuentinhasNow1_5Tests.swift; sourceTree = "<group>"; };
+		AF0BC1012BE05A2B00CD7C2B /* QuentinhasNow1.5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuentinhasNow1.5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0BC1052BE05A2B00CD7C2B /* QuentinhasNow1_5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuentinhasNow1_5UITests.swift; sourceTree = "<group>"; };
+		AF0BC1072BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuentinhasNow1_5UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF0BC0E42BE05A2900CD7C2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0BC0F42BE05A2B00CD7C2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0BC0FE2BE05A2B00CD7C2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF0BC0DE2BE05A2900CD7C2B = {
+			isa = PBXGroup;
+			children = (
+				AF0BC0E92BE05A2900CD7C2B /* QuentinhasNow1.5 */,
+				AF0BC0FA2BE05A2B00CD7C2B /* QuentinhasNow1.5Tests */,
+				AF0BC1042BE05A2B00CD7C2B /* QuentinhasNow1.5UITests */,
+				AF0BC0E82BE05A2900CD7C2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF0BC0E82BE05A2900CD7C2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF0BC0E72BE05A2900CD7C2B /* QuentinhasNow1.5.app */,
+				AF0BC0F72BE05A2B00CD7C2B /* QuentinhasNow1.5Tests.xctest */,
+				AF0BC1012BE05A2B00CD7C2B /* QuentinhasNow1.5UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF0BC0E92BE05A2900CD7C2B /* QuentinhasNow1.5 */ = {
+			isa = PBXGroup;
+			children = (
+				AF0BC0EA2BE05A2900CD7C2B /* QuentinhasNow1_5App.swift */,
+				AF0BC0EC2BE05A2900CD7C2B /* ContentView.swift */,
+				AF0BC0EE2BE05A2B00CD7C2B /* Assets.xcassets */,
+				AF0BC0F02BE05A2B00CD7C2B /* Preview Content */,
+			);
+			path = QuentinhasNow1.5;
+			sourceTree = "<group>";
+		};
+		AF0BC0F02BE05A2B00CD7C2B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF0BC0F12BE05A2B00CD7C2B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF0BC0FA2BE05A2B00CD7C2B /* QuentinhasNow1.5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF0BC0FB2BE05A2B00CD7C2B /* QuentinhasNow1_5Tests.swift */,
+			);
+			path = QuentinhasNow1.5Tests;
+			sourceTree = "<group>";
+		};
+		AF0BC1042BE05A2B00CD7C2B /* QuentinhasNow1.5UITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF0BC1052BE05A2B00CD7C2B /* QuentinhasNow1_5UITests.swift */,
+				AF0BC1072BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift */,
+			);
+			path = QuentinhasNow1.5UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF0BC0E62BE05A2900CD7C2B /* QuentinhasNow1.5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF0BC10B2BE05A2B00CD7C2B /* Build configuration list for PBXNativeTarget "QuentinhasNow1.5" */;
+			buildPhases = (
+				AF0BC0E32BE05A2900CD7C2B /* Sources */,
+				AF0BC0E42BE05A2900CD7C2B /* Frameworks */,
+				AF0BC0E52BE05A2900CD7C2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuentinhasNow1.5;
+			productName = QuentinhasNow1.5;
+			productReference = AF0BC0E72BE05A2900CD7C2B /* QuentinhasNow1.5.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF0BC0F62BE05A2B00CD7C2B /* QuentinhasNow1.5Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF0BC10E2BE05A2B00CD7C2B /* Build configuration list for PBXNativeTarget "QuentinhasNow1.5Tests" */;
+			buildPhases = (
+				AF0BC0F32BE05A2B00CD7C2B /* Sources */,
+				AF0BC0F42BE05A2B00CD7C2B /* Frameworks */,
+				AF0BC0F52BE05A2B00CD7C2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF0BC0F92BE05A2B00CD7C2B /* PBXTargetDependency */,
+			);
+			name = QuentinhasNow1.5Tests;
+			productName = QuentinhasNow1.5Tests;
+			productReference = AF0BC0F72BE05A2B00CD7C2B /* QuentinhasNow1.5Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF0BC1002BE05A2B00CD7C2B /* QuentinhasNow1.5UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF0BC1112BE05A2B00CD7C2B /* Build configuration list for PBXNativeTarget "QuentinhasNow1.5UITests" */;
+			buildPhases = (
+				AF0BC0FD2BE05A2B00CD7C2B /* Sources */,
+				AF0BC0FE2BE05A2B00CD7C2B /* Frameworks */,
+				AF0BC0FF2BE05A2B00CD7C2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF0BC1032BE05A2B00CD7C2B /* PBXTargetDependency */,
+			);
+			name = QuentinhasNow1.5UITests;
+			productName = QuentinhasNow1.5UITests;
+			productReference = AF0BC1012BE05A2B00CD7C2B /* QuentinhasNow1.5UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF0BC0DF2BE05A2900CD7C2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					AF0BC0E62BE05A2900CD7C2B = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					AF0BC0F62BE05A2B00CD7C2B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = AF0BC0E62BE05A2900CD7C2B;
+					};
+					AF0BC1002BE05A2B00CD7C2B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = AF0BC0E62BE05A2900CD7C2B;
+					};
+				};
+			};
+			buildConfigurationList = AF0BC0E22BE05A2900CD7C2B /* Build configuration list for PBXProject "QuentinhasNow1.5" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF0BC0DE2BE05A2900CD7C2B;
+			productRefGroup = AF0BC0E82BE05A2900CD7C2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF0BC0E62BE05A2900CD7C2B /* QuentinhasNow1.5 */,
+				AF0BC0F62BE05A2B00CD7C2B /* QuentinhasNow1.5Tests */,
+				AF0BC1002BE05A2B00CD7C2B /* QuentinhasNow1.5UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF0BC0E52BE05A2900CD7C2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0BC0F22BE05A2B00CD7C2B /* Preview Assets.xcassets in Resources */,
+				AF0BC0EF2BE05A2B00CD7C2B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0BC0F52BE05A2B00CD7C2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0BC0FF2BE05A2B00CD7C2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF0BC0E32BE05A2900CD7C2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0BC0ED2BE05A2900CD7C2B /* ContentView.swift in Sources */,
+				AF0BC0EB2BE05A2900CD7C2B /* QuentinhasNow1_5App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0BC0F32BE05A2B00CD7C2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0BC0FC2BE05A2B00CD7C2B /* QuentinhasNow1_5Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF0BC0FD2BE05A2B00CD7C2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0BC1062BE05A2B00CD7C2B /* QuentinhasNow1_5UITests.swift in Sources */,
+				AF0BC1082BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF0BC0F92BE05A2B00CD7C2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0BC0E62BE05A2900CD7C2B /* QuentinhasNow1.5 */;
+			targetProxy = AF0BC0F82BE05A2B00CD7C2B /* PBXContainerItemProxy */;
+		};
+		AF0BC1032BE05A2B00CD7C2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0BC0E62BE05A2900CD7C2B /* QuentinhasNow1.5 */;
+			targetProxy = AF0BC1022BE05A2B00CD7C2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AF0BC1092BE05A2B00CD7C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF0BC10A2BE05A2B00CD7C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF0BC10C2BE05A2B00CD7C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuentinhasNow1.5/Preview Content\"";
+				DEVELOPMENT_TEAM = WT58M4B929;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "QuentinhasNow.QuentinhasNow1-5";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF0BC10D2BE05A2B00CD7C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuentinhasNow1.5/Preview Content\"";
+				DEVELOPMENT_TEAM = WT58M4B929;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "QuentinhasNow.QuentinhasNow1-5";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF0BC10F2BE05A2B00CD7C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WT58M4B929;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "QuentinhasNow.QuentinhasNow1-5Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuentinhasNow1.5.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuentinhasNow1.5";
+			};
+			name = Debug;
+		};
+		AF0BC1102BE05A2B00CD7C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WT58M4B929;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "QuentinhasNow.QuentinhasNow1-5Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuentinhasNow1.5.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuentinhasNow1.5";
+			};
+			name = Release;
+		};
+		AF0BC1122BE05A2B00CD7C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WT58M4B929;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "QuentinhasNow.QuentinhasNow1-5UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuentinhasNow1.5;
+			};
+			name = Debug;
+		};
+		AF0BC1132BE05A2B00CD7C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WT58M4B929;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "QuentinhasNow.QuentinhasNow1-5UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuentinhasNow1.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF0BC0E22BE05A2900CD7C2B /* Build configuration list for PBXProject "QuentinhasNow1.5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF0BC1092BE05A2B00CD7C2B /* Debug */,
+				AF0BC10A2BE05A2B00CD7C2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF0BC10B2BE05A2B00CD7C2B /* Build configuration list for PBXNativeTarget "QuentinhasNow1.5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF0BC10C2BE05A2B00CD7C2B /* Debug */,
+				AF0BC10D2BE05A2B00CD7C2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF0BC10E2BE05A2B00CD7C2B /* Build configuration list for PBXNativeTarget "QuentinhasNow1.5Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF0BC10F2BE05A2B00CD7C2B /* Debug */,
+				AF0BC1102BE05A2B00CD7C2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF0BC1112BE05A2B00CD7C2B /* Build configuration list for PBXNativeTarget "QuentinhasNow1.5UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF0BC1122BE05A2B00CD7C2B /* Debug */,
+				AF0BC1132BE05A2B00CD7C2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF0BC0DF2BE05A2900CD7C2B /* Project object */;
+}
