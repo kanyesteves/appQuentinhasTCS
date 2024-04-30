@@ -14,6 +14,12 @@
 		AF0BC0FC2BE05A2B00CD7C2B /* QuentinhasNow1_5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC0FB2BE05A2B00CD7C2B /* QuentinhasNow1_5Tests.swift */; };
 		AF0BC1062BE05A2B00CD7C2B /* QuentinhasNow1_5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC1052BE05A2B00CD7C2B /* QuentinhasNow1_5UITests.swift */; };
 		AF0BC1082BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC1072BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift */; };
+		AF0BC1182BE05AEE00CD7C2B /* UserBleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC1172BE05AEE00CD7C2B /* UserBleService.swift */; };
+		AF0BC11A2BE05B2D00CD7C2B /* UserBlePeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC1192BE05B2D00CD7C2B /* UserBlePeripheral.swift */; };
+		AF0BC11C2BE05B5B00CD7C2B /* UserBleCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC11B2BE05B5B00CD7C2B /* UserBleCharacteristic.swift */; };
+		AF0BC11E2BE05BA300CD7C2B /* BleCommViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC11D2BE05BA300CD7C2B /* BleCommViewModel.swift */; };
+		AF0BC1202BE05C3500CD7C2B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC11F2BE05C3500CD7C2B /* HomeView.swift */; };
+		AF0BC1222BE05C5400CD7C2B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BC1212BE05C5400CD7C2B /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		AF0BC1012BE05A2B00CD7C2B /* QuentinhasNow1.5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuentinhasNow1.5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0BC1052BE05A2B00CD7C2B /* QuentinhasNow1_5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuentinhasNow1_5UITests.swift; sourceTree = "<group>"; };
 		AF0BC1072BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuentinhasNow1_5UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF0BC1172BE05AEE00CD7C2B /* UserBleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBleService.swift; sourceTree = "<group>"; };
+		AF0BC1192BE05B2D00CD7C2B /* UserBlePeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlePeripheral.swift; sourceTree = "<group>"; };
+		AF0BC11B2BE05B5B00CD7C2B /* UserBleCharacteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBleCharacteristic.swift; sourceTree = "<group>"; };
+		AF0BC11D2BE05BA300CD7C2B /* BleCommViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleCommViewModel.swift; sourceTree = "<group>"; };
+		AF0BC11F2BE05C3500CD7C2B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AF0BC1212BE05C5400CD7C2B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +106,10 @@
 		AF0BC0E92BE05A2900CD7C2B /* QuentinhasNow1.5 */ = {
 			isa = PBXGroup;
 			children = (
+				AF0BC1162BE05A9600CD7C2B /* Model */,
+				AF0BC1152BE05A8F00CD7C2B /* View */,
+				AF0BC1142BE05A8600CD7C2B /* ViewModel */,
 				AF0BC0EA2BE05A2900CD7C2B /* QuentinhasNow1_5App.swift */,
-				AF0BC0EC2BE05A2900CD7C2B /* ContentView.swift */,
 				AF0BC0EE2BE05A2B00CD7C2B /* Assets.xcassets */,
 				AF0BC0F02BE05A2B00CD7C2B /* Preview Content */,
 			);
@@ -125,6 +139,34 @@
 				AF0BC1072BE05A2B00CD7C2B /* QuentinhasNow1_5UITestsLaunchTests.swift */,
 			);
 			path = QuentinhasNow1.5UITests;
+			sourceTree = "<group>";
+		};
+		AF0BC1142BE05A8600CD7C2B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF0BC11D2BE05BA300CD7C2B /* BleCommViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF0BC1152BE05A8F00CD7C2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF0BC0EC2BE05A2900CD7C2B /* ContentView.swift */,
+				AF0BC11F2BE05C3500CD7C2B /* HomeView.swift */,
+				AF0BC1212BE05C5400CD7C2B /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF0BC1162BE05A9600CD7C2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF0BC1172BE05AEE00CD7C2B /* UserBleService.swift */,
+				AF0BC1192BE05B2D00CD7C2B /* UserBlePeripheral.swift */,
+				AF0BC11B2BE05B5B00CD7C2B /* UserBleCharacteristic.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0BC11A2BE05B2D00CD7C2B /* UserBlePeripheral.swift in Sources */,
+				AF0BC1222BE05C5400CD7C2B /* DetailView.swift in Sources */,
+				AF0BC1202BE05C3500CD7C2B /* HomeView.swift in Sources */,
+				AF0BC11C2BE05B5B00CD7C2B /* UserBleCharacteristic.swift in Sources */,
+				AF0BC11E2BE05BA300CD7C2B /* BleCommViewModel.swift in Sources */,
 				AF0BC0ED2BE05A2900CD7C2B /* ContentView.swift in Sources */,
 				AF0BC0EB2BE05A2900CD7C2B /* QuentinhasNow1_5App.swift in Sources */,
+				AF0BC1182BE05AEE00CD7C2B /* UserBleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +473,14 @@
 				DEVELOPMENT_TEAM = WT58M4B929;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow for bluetooth use";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Please allow using bluetooth for discovering peripherals";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +505,14 @@
 				DEVELOPMENT_TEAM = WT58M4B929;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow for bluetooth use";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Please allow using bluetooth for discovering peripherals";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
