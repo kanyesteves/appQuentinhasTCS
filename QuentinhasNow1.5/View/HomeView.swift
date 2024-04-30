@@ -27,6 +27,7 @@ struct HomeView: View {
             }
             .navigationBarTitle("Dispositivos disponíveis")
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

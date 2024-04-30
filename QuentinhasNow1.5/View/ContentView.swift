@@ -67,7 +67,6 @@ struct ContentView: View {
                     .cornerRadius(10)
                     .padding(.top, 10)
 
-                    
                     NavigationLink(destination: HomeView(), isActive: $showLoginScreen) {}
                 }
             }
@@ -76,7 +75,7 @@ struct ContentView: View {
     }
     
     func authenticateUser(username: String, password: String) {
-        if username.lowercased() == "kanydian" {
+        if username.lowercased() == "admin" {
             wrongLogin = 0
             
             if password.lowercased() == "132567" {

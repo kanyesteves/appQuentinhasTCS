@@ -154,12 +154,10 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
                 _characteristic: characteristic,
                 _uuid: characteristic.uuid
                 )
-                        
-            print(foundOneUserChar.characteristic.uuid)
+
             for item in connectedUserBlePeripheral?.userServices ?? [] {
                 
                 if item.uuid.uuidString == service.uuid.uuidString {
-                    
                     print("Achou uma característica: \(foundOneUserChar.uuid.uuidString)")
                     item.userCharacteristices.append(foundOneUserChar)
                 }
