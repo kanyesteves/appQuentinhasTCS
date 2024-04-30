@@ -130,7 +130,6 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
                                                     _userCharacteristices: []
                                                     )
             
-            // setup for user
             let oneUserBleService: UserBleService = UserBleService (
                 _uuid: foundOneService.uuid,
                 _service: foundOneService.service,
@@ -145,14 +144,14 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
         
     }
     
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?)
-    {
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
     
         service.characteristics?.forEach { characteristic in
             
             let foundOneUserChar : UserBleCharacteristic = UserBleCharacteristic(
                 _characteristic: characteristic,
-                _uuid: characteristic.uuid
+                _uuid: characteristic.uuid,
+                _data: characteristic.value
                 )
 
             for item in connectedUserBlePeripheral?.userServices ?? [] {
@@ -179,7 +178,6 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
             return serviceName;
         }
         else {
-            
             return " "
         }
         

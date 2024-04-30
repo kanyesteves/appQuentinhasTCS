@@ -75,10 +75,10 @@ struct ContentView: View {
     }
     
     func authenticateUser(username: String, password: String) {
-        if username.lowercased() == "admin" {
+        if username.lowercased() == "adm" {
             wrongLogin = 0
             
-            if password.lowercased() == "132567" {
+            if password.lowercased() == "132" {
                 wrongPassword = 0
                 showLoginScreen = true
             } else {
