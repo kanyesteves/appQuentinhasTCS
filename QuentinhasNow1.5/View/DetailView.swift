@@ -42,6 +42,7 @@ struct DetailView: View {
                             Divider().padding(.vertical, 2)
                             Text("Característica: ")
                             Text("\(userChar.uuid.uuidString) \n").font(.subheadline)
+                            
                         }
 
                     }
@@ -50,6 +51,14 @@ struct DetailView: View {
                             .stroke(Color.blue, lineWidth: 1)
                     ).padding(.horizontal, 10)
                     
+                    Button(action: startProcess) {
+                        Text("Iniciar")
+                            .padding()
+                            .frame(width: 80.0, height: 30.0)
+                            .foregroundColor(Color.white)
+                            .background(Color.purple)
+                            .cornerRadius(8)
+                    }
                 }
             }
             else {
@@ -83,6 +92,12 @@ struct DetailView: View {
             bleViewModel.centralManager?.connect(oneDev.userPeripheral)
         }
         
+    }
+    
+    func startProcess(){
+        let valueString = "start"
+        let valueData = valueString.data(using: .utf8)
+//        oneDev.userPeripheral.writeValue(valueData!, for: oneDev.)
     }
     
     func goBack(){

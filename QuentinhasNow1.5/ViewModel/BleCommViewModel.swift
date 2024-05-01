@@ -145,23 +145,26 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-    
         service.characteristics?.forEach { characteristic in
-            
+            peripheral.readValue(for: characteristic)
+        }
+    }
+
+    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        if let value = characteristic.value {
             let foundOneUserChar : UserBleCharacteristic = UserBleCharacteristic(
                 _characteristic: characteristic,
                 _uuid: characteristic.uuid,
-                _data: characteristic.value
-                )
+                _data: value
+            )
 
             for item in connectedUserBlePeripheral?.userServices ?? [] {
-                
-                if item.uuid.uuidString == service.uuid.uuidString {
+                if item.uuid.uuidString == characteristic.service!.uuid.uuidString {
+                    let stringValue = String(data: value, encoding: .utf8)
                     print("Achou uma característica: \(foundOneUserChar.uuid.uuidString)")
                     item.userCharacteristices.append(foundOneUserChar)
                 }
             }
-            
         }
     }
     
