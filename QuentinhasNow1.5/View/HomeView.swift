@@ -21,7 +21,11 @@ struct HomeView: View {
                     NavigationLink(destination: DetailView(oneDev: ele, bleViewModel: bluetoothViewModel)) {
                         PeripheralCell(onePeri: ele)
                     }
-
+                    
+                    Image(systemName: "microwave")
+                        .foregroundColor(.orange)
+                        .font(.system(size: 250))
+                        .symbolVariant(.circle)
                 }
                 
             }
