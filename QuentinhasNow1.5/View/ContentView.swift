@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import Firebase 
 
 struct ContentView: View {
-    
     @State private var login = ""
     @State private var passwd = ""
     @State private var wrongLogin = 0
@@ -17,9 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-        
             ZStack {
-                
                 Circle()
                     .scale(1.7)
                     .foregroundColor(.orange.opacity(0.90))
@@ -43,7 +41,6 @@ struct ContentView: View {
                     .foregroundColor(.white)
                 
                 VStack {
-                    
                     TextField("Login", text: $login)
                         .padding()
                         .frame(width: 300, height: 50)

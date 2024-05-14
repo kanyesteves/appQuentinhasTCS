@@ -9,7 +9,6 @@ import SwiftUI
 import CoreBluetooth
 
 class BleCommViewModel: NSObject, ObservableObject {
-    
     @Published var centralManager: CBCentralManager?
     @Published var foundOnePeripheral: UserBlePeripheral!
     @Published var foundPeripherals: [UserBlePeripheral] = []
@@ -20,11 +19,9 @@ class BleCommViewModel: NSObject, ObservableObject {
         super.init()
         self.centralManager = CBCentralManager(delegate: self, queue: .main)
     }
-    
 }
 
 extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
- 
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         print("Passo 1")
         if(central.state == .poweredOn) {
@@ -55,12 +52,10 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
                 
             @unknown default:
                 print("Erro")
-                
         }
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-            
         foundOnePeripheral = UserBlePeripheral (
             _userPeripheral: peripheral,
             _userServices: [],
@@ -74,18 +69,15 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
                 foundPeripherals.append(foundOnePeripheral)
             }
         }
-                
     }
     
     func IsInFoundPeripherals (_ onePeripheral: UserBlePeripheral) -> Bool {
-        
         for item in foundPeripherals {
             
             if item.userPeripheral.identifier.uuidString == onePeripheral.userPeripheral.identifier.uuidString {
                 return true
             }
         }
-        
         return false
     }
     
@@ -96,11 +88,9 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-                
         print("Um dispositivo conectado")
         peripheral.delegate = self;
         
-        // establish a connected device
         connectedUserBlePeripheral = UserBlePeripheral(
             _userPeripheral: peripheral,
             _userServices: [],
@@ -110,11 +100,9 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
         
         peripheral.discoverServices(nil)
         print("Buscando serviços")
-        
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        
         peripheral.services?.forEach { oneService in
             
             let serName = getServiceName(serviceDescription: oneService.description)
@@ -141,7 +129,6 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
             print("Encontrado um serviço: \(foundOneService.uuid.uuidString)")
             peripheral.discoverCharacteristics(nil, for: foundOneService.service)
         }
-        
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
@@ -160,7 +147,6 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
 
             for item in connectedUserBlePeripheral?.userServices ?? [] {
                 if item.uuid.uuidString == characteristic.service!.uuid.uuidString {
-                    let stringValue = String(data: value, encoding: .utf8)
                     print("Achou uma característica: \(foundOneUserChar.uuid.uuidString)")
                     item.userCharacteristices.append(foundOneUserChar)
                 }
@@ -169,7 +155,6 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
     }
     
     func getServiceName(serviceDescription: String) -> String {
-        
         let target = "UUID = "
         if let range = serviceDescription.range(of: target) {
             let uuidRange = range.upperBound..<serviceDescription.endIndex
@@ -183,7 +168,6 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
         else {
             return " "
         }
-        
     }
 
     func resetConfigure() {
@@ -191,7 +175,5 @@ extension BleCommViewModel: CBCentralManagerDelegate, CBPeripheralDelegate {
             connectedUserBlePeripheral = nil
         }
     }
-
-    
 }
 

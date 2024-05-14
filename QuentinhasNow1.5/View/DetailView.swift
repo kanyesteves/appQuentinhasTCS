@@ -6,18 +6,15 @@
 //
 
 import SwiftUI
-
 import CoreBluetooth
 
 struct DetailView: View {
-    
     @StateObject public var oneDev: UserBlePeripheral
     @StateObject public var bleViewModel: BleCommViewModel
     @State var connectionStatus: String = "Conectando ..."
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        
         NavigationStack{
             
             Text(oneDev.name)
@@ -50,7 +47,6 @@ struct DetailView: View {
                 }
             }
             else {
-                
                 Text("\(connectionStatus)")
                 
                 var count = 0
