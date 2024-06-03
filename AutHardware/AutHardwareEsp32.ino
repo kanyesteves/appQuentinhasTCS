@@ -7,11 +7,13 @@
 #define SERVICE_UUID        "6f692fbe-0858-4747-89fb-6c3fe7a6681f"
 #define CHARACTERISTIC_UUID "428c918a-53ab-4eef-827d-74a0d4b6d267"
 
+#define BUZZER_PIN 25
+#define FREQUENCY 1000
+
 Servo meuServo;
 
 const int pinoServo = 26;
 
-// Definindo as constantes
 const std::string START = "start";
 const std::string STOP = "stop";
 const std::string IN_USE = "in-use";
@@ -31,6 +33,9 @@ public:
 
     void onConnect(BLEServer* pServer) override {
         if (pMeuServo) {
+            tone(BUZZER_PIN, FREQUENCY);
+            delay(200);
+            noTone(BUZZER_PIN);
             pMeuServo->write(50);
             delay(200);
             pMeuServo->write(0);
@@ -40,6 +45,12 @@ public:
     void onDisconnect(BLEServer* pServer) override {
       BLEAdvertising *pAdvertising = pServer->getAdvertising();
       pAdvertising->start();
+      for(int i = 0; i < 3; i++) {
+        tone(BUZZER_PIN, FREQUENCY);
+        delay(200);
+        noTone(BUZZER_PIN);
+        delay(200);
+      }
     }
 };
 
@@ -58,9 +69,22 @@ class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
         if (!processInProgress) {
             processInProgress = true;
             pCharacteristic->setValue(IN_USE);
+            for(int i = 0; i < 2; i++) {
+              tone(BUZZER_PIN, FREQUENCY);
+              delay(200);
+              noTone(BUZZER_PIN);
+              delay(200);
+            }
             meuServo.write(50);
             delay(200);
             meuServo.write(0);
+            delay(3000);
+            for(int i = 0; i < 4; i++) {
+              tone(BUZZER_PIN, FREQUENCY);
+              delay(200);
+              noTone(BUZZER_PIN);
+              delay(200);
+            }
         } else {
             pCharacteristic->setValue(WAIT);
         }
@@ -77,6 +101,7 @@ class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
 void setup() {
     Serial.begin(115200);
     meuServo.attach(pinoServo);
+    pinMode(BUZZER_PIN, OUTPUT);
     BLEDevice::init("ESP32 LUCAS TCS");
     pServer = BLEDevice::createServer();
     pServer->setCallbacks(new MyServerCallbacks(&meuServo));
