@@ -2,17 +2,13 @@
 #include <BLEServer.h>
 #include <BLEUtils.h>
 #include <BLE2902.h>
-#include <ESP32Servo.h>
 
 #define SERVICE_UUID        "6f692fbe-0858-4747-89fb-6c3fe7a6681f"
 #define CHARACTERISTIC_UUID "428c918a-53ab-4eef-827d-74a0d4b6d267"
 
 #define BUZZER_PIN 25
 #define FREQUENCY 1000
-
-Servo meuServo;
-
-const int pinoServo = 26;
+#define RELAY_PIN 26
 
 const std::string START = "start";
 const std::string STOP = "stop";
@@ -25,32 +21,24 @@ BLECharacteristic* pCharacteristic = NULL;
 bool processInProgress = false;
 
 class MyServerCallbacks : public BLEServerCallbacks {
-private:
-    Servo* pMeuServo;
-
-public:
-    MyServerCallbacks(Servo* servo) : pMeuServo(servo) {}
-
     void onConnect(BLEServer* pServer) override {
-        if (pMeuServo) {
-            tone(BUZZER_PIN, FREQUENCY);
-            delay(200);
-            noTone(BUZZER_PIN);
-            pMeuServo->write(50);
-            delay(200);
-            pMeuServo->write(0);
-        }
-    }
-
-    void onDisconnect(BLEServer* pServer) override {
-      BLEAdvertising *pAdvertising = pServer->getAdvertising();
-      pAdvertising->start();
-      for(int i = 0; i < 3; i++) {
         tone(BUZZER_PIN, FREQUENCY);
         delay(200);
         noTone(BUZZER_PIN);
+        digitalWrite(RELAY_PIN, HIGH); // Ativa o relé
         delay(200);
-      }
+        digitalWrite(RELAY_PIN, LOW); // Desativa o relé
+    }
+
+    void onDisconnect(BLEServer* pServer) override {
+        BLEAdvertising *pAdvertising = pServer->getAdvertising();
+        pAdvertising->start();
+        for(int i = 0; i < 3; i++) {
+            tone(BUZZER_PIN, FREQUENCY);
+            delay(200);
+            noTone(BUZZER_PIN);
+            delay(200);
+        }
     }
 };
 
@@ -69,22 +57,13 @@ class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
         if (!processInProgress) {
             processInProgress = true;
             pCharacteristic->setValue(IN_USE);
-            for(int i = 0; i < 2; i++) {
-              tone(BUZZER_PIN, FREQUENCY);
-              delay(200);
-              noTone(BUZZER_PIN);
-              delay(200);
-            }
-            meuServo.write(50);
+            tone(BUZZER_PIN, FREQUENCY);
             delay(200);
-            meuServo.write(0);
-            delay(3000);
-            for(int i = 0; i < 4; i++) {
-              tone(BUZZER_PIN, FREQUENCY);
-              delay(200);
-              noTone(BUZZER_PIN);
-              delay(200);
-            }
+            noTone(BUZZER_PIN);
+            digitalWrite(RELAY_PIN, HIGH); // Ativa o relé
+            delay(2000);
+            digitalWrite(RELAY_PIN, LOW); // Desativa o relé
+            pCharacteristic->setValue(AVAILABLE);
         } else {
             pCharacteristic->setValue(WAIT);
         }
@@ -93,18 +72,18 @@ class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
     void handleStopCommand() {
         if (processInProgress) {
             processInProgress = false;
-            pCharacteristic->setValue(AVAILABLE);
+            digitalWrite(RELAY_PIN, LOW); // Garante que o relé esteja desativado
         }
     }
 };
 
 void setup() {
     Serial.begin(115200);
-    meuServo.attach(pinoServo);
+    pinMode(RELAY_PIN, OUTPUT); // Configura o pino do relé como saída
     pinMode(BUZZER_PIN, OUTPUT);
     BLEDevice::init("ESP32 LUCAS TCS");
     pServer = BLEDevice::createServer();
-    pServer->setCallbacks(new MyServerCallbacks(&meuServo));
+    pServer->setCallbacks(new MyServerCallbacks());
     BLEService *pService = pServer->createService(SERVICE_UUID);
 
     pCharacteristic = pService->createCharacteristic(
@@ -113,7 +92,7 @@ void setup() {
                         BLECharacteristic::PROPERTY_WRITE |
                         BLECharacteristic::PROPERTY_NOTIFY
                     );
-    
+
     pCharacteristic->addDescriptor(new BLE2902());
     pCharacteristic->setCallbacks(new MyCharacteristicCallbacks());
     pCharacteristic->setValue(AVAILABLE);
